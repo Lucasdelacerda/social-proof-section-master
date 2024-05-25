@@ -29,8 +29,8 @@ main {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 410px;
-    gap: 160px;
+    gap: 270px;
+
 }
 
 #title {
@@ -45,25 +45,102 @@ main {
     font-size: 14px;
     font-weight: 500;
     color: var(--Dark-Grayish-Magenta);
+    max-width: 475px;
 
 }
 
 #rated-container {
     display: flex;
     flex-direction: column;
-    border: 2px solid red;
     gap: 15px;
     width: 650px;
     height: 250px;
 }
-.hated{ 
-    background:var(--Light-Grayish-Magenta) ;
-    font-size:16px;
-    font-weight:500 ;
-    color:var(--Very-Dark-Magenta) ;
+
+.rated {
+    background: var(--Light-Grayish-Magenta);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--Very-Dark-Magenta);
     border-radius: 5px;
-    padding:18px 15px;
+    padding: 18px 15px;
+    width: 450px;
+    .stars-container{
+        
+    }
+    span {
+        margin-left: 20px;
+
+    }
 }
+
+.rated:first-child {
+    margin-left: -90px;
+}
+
+.rated:not(:first-child, :last-child) {
+    margin-left: -45px;
+}
+
+#cards-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+
+    .cards {
+        background: var(--Very-Dark-Magenta);
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: 235px;
+        border-radius: 10px;
+        padding: 30px;
+        color: white;
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+
+        }
+
+        .name-job {
+            width: 175px;
+            display: flex;
+            flex-direction: row;
+            font-size: 16px;
+            font-weight: 500;
+            gap: 15px;
+            line-height: 20px;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                color: var(--Soft-Pink);
+            }
+
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 300;
+            margin-top: 30px;
+            width: 275px;
+            text-align: left;
+            line-height: 22px;
+        }
+    }
+
+    .second {
+        margin-top: 20px;
+    }
+
+    .third {
+        margin-top: 35px;
+    }
+}
+
 
 .attribution {
     font-size: 11px;
@@ -72,4 +149,44 @@ main {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (max-width:855px) {
+
+    #top {
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            #description {
+                width: 265px;
+                text-align: center
+            }
+        }
+
+        #rated-container {
+            justify-content: center;
+            align-items: center;
+
+            .rated {
+                display: flex;
+                flex-direction: column;
+                max-width: 270px;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                flex-wrap: wrap;
+
+
+            }
+
+        }
+    }
 }
