@@ -31,6 +31,10 @@ main {
     width: 100%;
     gap: 270px;
 
+    #title-description-container {
+        min-width: 350px;
+
+    }
 }
 
 #title {
@@ -65,9 +69,16 @@ main {
     border-radius: 5px;
     padding: 18px 15px;
     width: 450px;
-    .stars-container{
-        
+    display: flex;
+    flex-direction: row;
+
+
+    .stars {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
     }
+
     span {
         margin-left: 20px;
 
@@ -151,7 +162,7 @@ main {
     color: hsl(228, 45%, 44%);
 }
 
-@media (max-width:855px) {
+@media (max-width:1110px) {
 
     #top {
         flex-direction: column;
@@ -166,8 +177,10 @@ main {
             text-align: center;
 
             #description {
-                width: 265px;
-                text-align: center
+                width: 298px;
+                text-align: center;
+                line-height: 20px;
+                font-size: 16px;
             }
         }
 
@@ -178,15 +191,36 @@ main {
             .rated {
                 display: flex;
                 flex-direction: column;
-                max-width: 270px;
+                max-width: 325px;
                 justify-content: center;
                 align-items: center;
                 margin: 0;
-                flex-wrap: wrap;
-
-
+                gap: 12px;
             }
 
+        }
+    }
+
+    #cards-container {
+        flex-direction: column;
+        margin-top: 50px;
+        gap: 16px;
+
+        .cards {
+            max-width: 326px;
+            padding-bottom: 215px;
+
+            p {
+                max-width: 250px;
+            }
+        }
+
+        .second {
+            margin: 0;
+        }
+
+        .third {
+            margin: 0;
         }
     }
 }
